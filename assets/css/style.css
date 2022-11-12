@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vw;
+    width: 100vw;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    border-radius: 4px;
+    background-color: salmon;
+    padding: 10pxy;
+}
