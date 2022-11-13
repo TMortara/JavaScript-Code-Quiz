@@ -1,3 +1,7 @@
+var timerEl = document.querySelector("#timer");
+var startBtnEl = document.querySelector("#start-btn");
+var nextBtnEl = document.querySelector("#next-btn");
+
 var quizQuestions = [
     {
         question: "What is a function contatined in a object called?",
@@ -46,3 +50,30 @@ var quizQuestions = [
     }, 
     
 ]
+
+var timer = 0;
+var totalTime = 60;
+var score = 0;
+
+//start time after click of start button
+function startTimer() {
+    timerEl.textContent = totalTime;
+    setInterval(function() {
+        if (totalTime >= 0) {
+        timerEl.textContent = totalTime;
+        totalTime--;
+        } 
+    }, 500);
+
+}
+
+function stopTimer() {
+    clearInterval(interval);
+}
+
+startBtnEl.addEventListener("click", function () {
+    // hide(welcomeEl);
+    startTimer();
+    // renderQuestion();
+    // show(quizEl);
+});
