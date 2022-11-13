@@ -9,29 +9,29 @@
     <title>JavaScript Coding Quiz</title>
 </head>
 <body>
-  <header>
-    <h1><a href=index-scores.html>View High Scores</h1></a>
-    <h1>Timer: <span id="timer">0</span></h1>
-    <h1>Current Score: <span id="currentScore">0</span></h1>
-  </header>
-  <div class="intro">
+    <header id="header" class="hidden">
+        <a class="btn" href=index-scores.html>View High Scores</a> 
+        <h1>Timer: <span id="timer">0</span></h1>
+        <h1>Current Score: <span id="currentScore">0</span></h1>
+    </header>
+  <div id="intro">
     <h1>JavaScript Coding Quiz</h1>
     <p>Try to answer as many code-related questions within the alloted time.  Keep in mind that any wrong answers will deduct 10 seconds off the timer.</p>
-    <button id="start-btn">Start</button>
-  </div>
-    <div class="container">
+    <a id="start-btn" class="control-btn">Start</a>
+  </div>  
+</div>
+    <div id="quizContainer" class="container hidden">
         <div id="question-container">
             <h2 id="question">Question</h2>
-            <div id="choice-btns">
-                <button class="btns">Choice 1</button>
-                <button class="btns">Choice 2</button>
-                <button class="btns">Choice 3</button>
-                <button class="btns">Choice 4</button>
+            <div id="choices" class="btn-grid">
+                <button id="0" class="btn">Choice 1</button>
+                <button id="1" class="btn">Choice 2</button>
+                <button id="2" class="btn">Choice 3</button>
+                <button id="3" class="btn">Choice 4</button>
             </div>
         </div>
     <div class="controls">
-        <button id="next-btn" class="hide">Next</button>
+        <button id="next-btn" class="control-btn">Next</button>
     </div>
-  </div>  
 </body>
 </html>

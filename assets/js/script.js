@@ -1,62 +1,64 @@
+var headerEl = document.querySelector("#header");
 // Buttons
 var timerEl = document.querySelector("#timer");
+var currentScoreEl = document.querySelector("#currentScore");
+var introEl = document.querySelector("#intro");
 var startBtnEl = document.querySelector("#start-btn");
 var nextBtnEl = document.querySelector("#next-btn");
-
+// Quiz Controls
+var quizEl = document.querySelector("#quizContainer");
+var questionsEl = document.querySelector("#question");
+var choicesEl = document.querySelector("#choices");
+// Universal Variables 
+// var timer = 0;
+var totalTime = 60;
+var score = 0;
+// Quiz Questions
 var quizQuestions = [
     {
-        question: "What is a function contatined in a object called?",
-        answer: [
-            {text: "function", correct: false},
-            {text: "array", correct: false},
-            {text: "property", correct: false},
-            {text: "method", correct: true}
-        ]
+        title: "What do you call a function contained in a object?",
+        choices: ["function", "array", "property", "method"],
+        answer: [3] 
     },
     {
-        question: "Which operator is used to determine strict equal?",
-        answer: [
-            {text: "==", correct: false},
-            {text: "!==", correct: false},
-            {text: "===", correct: true},
-            {text: "=", correct: false}
-        ]
+        title: "Which operator is used to determine strict equal?",
+        choices: ["==", "!==", "===", "="],
+        answer: [2]
     },
     {
-        question: "What data type returns a true or false value?",
-        answer: [
-            {text: "boolean", correct: true},
-            {text: "string", correct: false},
-            {text: "number", correct: false},
-            {text: "undefined", correct: false}
-        ]
+        title: "What data type returns a true or false value?",
+        choices: ["boolean", "string", "number", "undefined"],
+        answer: [0]
     },
     {
-        question: "Which character terminates a statement?",
-        answer: [
-            {text: "!", correct: false},
-            {text: ";", correct: true},
-            {text: ".", correct: false},
-            {text: "^", correct: false}
-        ]
+        title: "Which character terminates a statement?",
+        choices: ["!", ";", ".", "^"],
+        answer: [1] 
     }, 
     {
-        question: "What method do you use to generate a random number between 0 and 1?",
-        answer: [
-            {text: "Math.round()", correct: false},
-            {text: "Math.ceil()", correct: false},
-            {text: "Math.floor()", correct: false},
-            {text: "Math.random()", correct: true}
-        ]
+        title: "What method do you use to generate a random number between 0 and 1?",
+        choices: ["Math.round()", "Math.ceil()", "Math.floor()", "Math.random()"],
+        answer: [3]
     }, 
     
 ]
+var questionAskedIndex = 0;
 
-var timer = 0;
-var totalTime = 60;
-var score = 0;
+function startQuestions() {
+    var currentQuestion = quizQuestions[questionAskedIndex].title;
+    questionsEl.textContent = currentQuestion;
+    var CurrentQuestionAnswers = quizQuestions[questionAskedIndex].choices;
+    for (i = 0; i < choicesEl.children.length; i++) {
+        choicesEl.children[i].textContent = `${quizQuestions[questionAskedIndex].choices[i]}`;
+    }
+}
 
-//start time after click of start button
+function nextQuestion() {
+    
+}
+
+
+// Timer functions
 function startTimer() {
     timerEl.textContent = totalTime;
     setInterval(function() {
@@ -73,8 +75,26 @@ function stopTimer() {
 }
 
 startBtnEl.addEventListener("click", function () {
-    // hide(welcomeEl);
     startTimer();
+    startQuiz();
+    // setNextQuestion();
     // renderQuestion();
     // show(quizEl);
 });
+
+function startQuiz() {
+    hide(startBtnEl);
+    hide(introEl);
+    show(quizEl);
+    show(header);
+    startQuestions();
+}
+
+
+function hide(element) {
+    element.style.display = "none";
+}
+
+function show(element) {
+    element.style.display = "block";
+}
