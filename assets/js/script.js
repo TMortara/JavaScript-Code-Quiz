@@ -1,3 +1,4 @@
+// Buttons
 var timerEl = document.querySelector("#timer");
 var startBtnEl = document.querySelector("#start-btn");
 var nextBtnEl = document.querySelector("#next-btn");
@@ -63,8 +64,8 @@ function startTimer() {
         timerEl.textContent = totalTime;
         totalTime--;
         } 
-    }, 500);
-
+    }, 500); 
+//CHANGE TIMER INTERVAL
 }
 
 function stopTimer() {
