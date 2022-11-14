@@ -5,20 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz High Scores</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <!-- <link href="./assets/css/style-scores.css" rel="stylesheet"> MAY NOT NEED -->
+    <script defer src="./assets/js/script-scores.js"></script>
+
 </head>
 <body>
-    <div class="scoresInput">
-        <h1>All Done!</h1>
-        <p>Your final score: <span id="score"></span></p>
-        <p>Enter your initials: <input id="initials"></p>
-        <button id="submitInitials-btn" class="control-btn">Submit Initials</button>
-    </div>
+  
     <div class="highScores">
         <h1>High Scores</h1>
         <div id="scores-container"></div>
-        <button id="clearScores-btn" class="control-btn">Clear High Scores</button>
-        <button id="restart-btn" class="control-btn">Restart Quiz</button>
-    </div>
-    <script src="./assets/js/script-scores.js"></script>
+            <button id="clearScores-btn" class="control-btn">Clear High Scores</button>
+            <a href="./index.html"><button id="restart-btn" class="control-btn">Restart Quiz</button></a>
+        </div>
 </body>
 </html>
