@@ -3,6 +3,7 @@ var displayMessageEl = document.querySelector("#displayMessage");
 var currentScoreEl = document.querySelector("#currentScore");
 var introEl = document.querySelector("#intro");
 var inputHSEl = document.querySelector("#inputHS");
+var initialsEL = document.querySelector("#initials");
 // Buttons
 var timerEl = document.querySelector("#timer");
 var startBtnEl = document.querySelector("#start-btn");
@@ -15,6 +16,7 @@ var choicesEl = document.querySelector("#choices");
 // Global Variables 
 var totalTime = 60;
 var score = 0;
+var highScores = []; //MAKE SURE THIS DIDN'T CREATE ERRORS WITH SUBMIT HIGHSCORE
 var interval;
 // Quiz Questions
 var quizQuestions = [
@@ -118,7 +120,23 @@ function nextQuestion() {
     }
 }
 
-
+submitInitialsBtnEl.addEventListener("click", function() {
+    var userInitials = initialsEL.value.trim();
+    if (userInitials) {
+        var userScore = {
+            userInitials: userInitials,
+            finalScore: score
+        };
+       var highScores = JSON.parse(localStorage.getItem("highscores"));
+       if (!highScores) {
+        highScores = [];
+       }
+       highScores.push(userScore);
+       localStorage.setItem("highscores", JSON.stringify(highScores));
+       window.location.href="index-scores.html";
+    }
+}
+)
 
 
 
