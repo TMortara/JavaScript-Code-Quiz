@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+
     <link href="./assets/css/style.css" rel="stylesheet">
     <script defer src="./assets/js/script.js"></script>
     <title>JavaScript Coding Quiz</title>
 </head>
 <body>
-    <header id="header" class="hidden">
-        <h1 id="timer">Timer <span>0</span></h1>
-        <h1 id="currentScore">Score <span>0</span></h1>
+    <header id='header' class="hidden">
+            <h1 id="timer">Timer <span>0</span></h1>
+            <h1 id="currentScore">Score <span>0</span></h1>
     </header>
     <div id="intro">
         <h1>JavaScript Coding Quiz</h1>
         <p>Try to answer as many code-related questions within the alloted time.  Keep in mind that any wrong answers will deduct 10 seconds off the timer.</p>
-        <button id="start-btn" class="control-btn">Start</button>
-        <a href="./index-scores.html"><button class="control-btn" href=index-scores.html>View High Scores</button></a>
+        <div>
+            <button id="start-btn" class="control-btn">Start</button>
+            <a href="./index-scores.html"><button class="control-btn" href=index-scores.html>View High Scores</button></a>
+        </div>
     </div>  
     <div id="quizContainer" class="container hidden">
         <div id="question-container">
@@ -33,7 +37,6 @@
     </div>
     <div id="inputHS" class="scoresInput hidden">
         <h1>All Done!</h1>
-        <p>Your final score <span id="score"></span></p>
         <p>Enter your initials <input id="initials"></p>
         <button id="submitInitials-btn" class="control-btn">Submit Initials</button>
     </div>
