@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
-
     <link href="./assets/css/style.css" rel="stylesheet">
     <script defer src="./assets/js/script.js"></script>
     <title>JavaScript Coding Quiz</title>
 </head>
 <body>
     <header id='header' class="hidden">
-            <h1 id="timer">Timer <span>0</span></h1>
-            <h1 id="currentScore">Score <span>0</span></h1>
+        <h1 id="timer">Timer <span>0</span></h1>
+        <h1 id="currentScore">Score <span>0</span></h1>
     </header>
     <div id="intro">
         <h1>JavaScript Coding Quiz</h1>
         <p>Try to answer as many code-related questions within the alloted time.  Keep in mind that any wrong answers will deduct 10 seconds off the timer.</p>
         <div>
             <button id="start-btn" class="control-btn">Start</button>
-            <a href="./index-scores.html"><button class="control-btn" href=index-scores.html>View High Scores</button></a>
+            <button class="control-btn">
+                <a href="./index-scores.html">High Scores</a>
+            </button>
         </div>
     </div>  
     <div id="quizContainer" class="container hidden">

@@ -16,7 +16,7 @@ var choicesEl = document.querySelector("#choices");
 // Global Variables 
 var totalTime = 60;
 var score = 0;
-var highScores = []; //MAKE SURE THIS DIDN'T CREATE ERRORS WITH SUBMIT HIGHSCORE
+var highScores = [];
 var interval;
 // Quiz Questions
 var quizQuestions = [
@@ -53,9 +53,6 @@ startBtnEl.addEventListener("click", function () {
     startTimer();
     startQuiz();
     show(timerEl);
-    // setNextQuestion();
-    // renderQuestion();
-    // show(quizEl);
 });
 
 function startTimer() {
@@ -90,7 +87,7 @@ function startQuestions() {
 }
 function checkAnswer(answer) {
     if (quizQuestions[questionAskedIndex].answer == answer.id) {
-        score += 1;
+        score += 100;
         currentScoreEl.textContent = "Current Score " + score;
         displayMessageEl.textContent = "Correct!";
     }
@@ -137,12 +134,6 @@ submitInitialsBtnEl.addEventListener("click", function() {
     }
 }
 )
-
-
-
-
-
-
 
 function hide(element) {
     element.style.display = "none";
