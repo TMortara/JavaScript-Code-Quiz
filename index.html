@@ -11,8 +11,10 @@
 </head>
 <body>
     <header id='header' class="hidden">
-        <h1 id="timer">Timer <span>0</span></h1>
-        <h1 id="currentScore">Score <span>0</span></h1>
+        <div class="metrics">
+            <h1 id="timer">Timer <span>0</span></h1>
+            <h1 id="currentScore">Score <span>0</span></h1>
+        </div>
     </header>
     <div id="intro">
         <h1>JavaScript Coding Quiz</h1>
@@ -33,13 +35,13 @@
                 <button id="2" class="btn">Choice 3</button>
                 <button id="3" class="btn">Choice 4</button>
             </div>
+            <h3 id="displayMessage"></h3>
         </div>
-        <h3 id="displayMessage"></h3>
     </div>
-    <div id="inputHS" class="scoresInput hidden">
-        <h1>All Done!</h1>
-        <p>Enter your initials <input id="initials"></p>
-        <button id="submitInitials-btn" class="control-btn">Submit Initials</button>
+    <div id="inputHS" class="scoresInput">
+        <h1 class="completion-message">All Done!</h1>
+        <p class="initials-input">Please enter your initials <input id="initials"></p>
+        <button id="submitInitials-btn" class="control-btn submit">Submit Initials</button>
     </div>
 </body>
 </html>

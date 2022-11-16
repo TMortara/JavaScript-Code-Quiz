@@ -3,6 +3,7 @@ var displayMessageEl = document.querySelector("#displayMessage");
 var currentScoreEl = document.querySelector("#currentScore");
 var introEl = document.querySelector("#intro");
 var inputHSEl = document.querySelector("#inputHS");
+document.querySelector('#inputHS').style.display = 'none';
 var initialsEL = document.querySelector("#initials");
 // Buttons
 var timerEl = document.querySelector("#timer");
@@ -49,6 +50,7 @@ var quizQuestions = [
 ]
 var questionAskedIndex = 0;
 
+
 startBtnEl.addEventListener("click", function () {
     startTimer();
     startQuiz();
@@ -58,13 +60,22 @@ startBtnEl.addEventListener("click", function () {
 function startTimer() {
     timerEl.textContent = "Timer " + totalTime;
     interval = setInterval(function() {
-        if (totalTime >= 0) {
+        if (totalTime > 0) {
         timerEl.textContent = "Timer " + totalTime;
         totalTime--;
         } 
-    }, 500); 
-//CHANGE TIMER INTERVAL
+        else if (totalTime===0) {
+            timerEl.textContent = "Timer " + totalTime;
+            //alert("Your time has expired! Please enter your intitals to save your high score.");
+            hide(quizEl);
+            show(inputHSEl);
+            stopTimer();
+        }
+    }, 500);
 }
+//CHANGE TIMER INTERVAL
+
+
 
 function stopTimer() {
     clearInterval(interval);
@@ -74,7 +85,7 @@ function startQuiz() {
     hide(startBtnEl);
     hide(introEl);
     show(quizEl);
-    show(header);
+    show(headerEl);
     startQuestions();
 }
 function startQuestions() {
@@ -111,7 +122,7 @@ function nextQuestion() {
     } else {
         stopTimer();
         hide(quizEl);
-        show(inputHSEl);
+        document.querySelector('#inputHS').style.display = 'flex';
         hide(timerEl);
         currentScoreEl.innerHTML = "Final Score " + score;
     }

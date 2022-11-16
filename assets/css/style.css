@@ -16,29 +16,70 @@ body {
     flex-direction: column;
 }
 
-header{
-    display: flex;
-    background-color: green;
+header {
+    /* background-color: green; */
     width: 80%;
     height: 15%;
+}
+
+.metrics {
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    color:#98C1D9;
+    font-size: 2rem;
+
 }
 
+h3 {
+    color:#E0FBFC;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
 
-#quizContainer{
-    background-color: orange;
+#quizContainer {
     width: 80%;
-    height: 70%
+    height: 70%;
 }
 
-#question-container{
-    height: 100%;
-    background-color: blue;
-    width:100%;
+#question-container {
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 55%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#question-container > h2 {
+    color:#E0FBFC;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+}
+
+#choices > button {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid black;
+    margin-bottom: 1rem;
+    color:#E0FBFC;
+    background-color: #EE6C4D;
+    border-radius: 4px;
+}
+
+#choices > button:hover {
+    box-shadow: #98C1D9 0 10px 12px, 0 12px 20px 0 #98C1D9;
 }
 
 /* h1 {
@@ -70,6 +111,7 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
     color: #E0FBFC;
+    font-size: 1.5rem;
 }
 
 #intro > div {
@@ -110,11 +152,41 @@ a:visited{
     width: 100%;
 } */
 
+.completion-message {
+    color:#98C1D9;
+    font-size: 3.0rem;
+    text-align: center;
+}
+
+#inputHS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.initials-input {
+    color:#E0FBFC;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#initials {
+    margin-top: 1.5rem;
+}
+
 .hidden {
     display: none;
 }
 
-
+/* #submitInitials-btn {
+    align-items: center;
+} */
 
 
 /* header {
