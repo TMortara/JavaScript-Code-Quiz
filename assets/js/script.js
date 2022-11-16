@@ -1,9 +1,9 @@
+var inputHSEl = document.querySelector("#inputHS");
+document.querySelector('#inputHS').style.display = 'none';
 var headerEl = document.querySelector("#header");
 var displayMessageEl = document.querySelector("#displayMessage");
 var currentScoreEl = document.querySelector("#currentScore");
 var introEl = document.querySelector("#intro");
-var inputHSEl = document.querySelector("#inputHS");
-document.querySelector('#inputHS').style.display = 'none';
 var initialsEL = document.querySelector("#initials");
 // Buttons
 var timerEl = document.querySelector("#timer");
@@ -66,7 +66,6 @@ function startTimer() {
         } 
         else if (totalTime===0) {
             timerEl.textContent = "Timer " + totalTime;
-            //alert("Your time has expired! Please enter your intitals to save your high score.");
             hide(quizEl);
             show(inputHSEl);
             stopTimer();
@@ -96,11 +95,15 @@ function startQuestions() {
         choicesEl.children[i].textContent = `${quizQuestions[questionAskedIndex].choices[i]}`;
     }
 }
+
 function checkAnswer(answer) {
     if (quizQuestions[questionAskedIndex].answer == answer.id) {
         score += 100;
         currentScoreEl.textContent = "Current Score " + score;
-        displayMessageEl.textContent = "Correct!";
+        displayMessageEl.textContent = "Correct!"; 
+        setTimeout(() => {
+            displayMessageEl.textContent = " ";
+        }, 200); 
     }
     else {
         totalTime -= 10;

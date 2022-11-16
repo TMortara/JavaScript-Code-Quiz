@@ -4,11 +4,10 @@ var restartBtnEl = document.querySelector("#restart-btn");
 
 // Scores List
 var highScoresEl = document.querySelector("#scores-container");
-var scoresInputEl = document.querySelector("#scoresInput");
 
 // High scores
 function renderHighscores() {
-    scoresInputEl.innerHTML = "";
+    highScoresEl.innerHTML = "";
     var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
     for (var i = 0; i < highScores.length; i++) {
         var scoreLine = document.createElement("li");
