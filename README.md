@@ -27,4 +27,5 @@ None
 ## Screenshot
 ![_Users_tracymortara_UTA-Bootcamp_Challenges_Challenges-4_JavaScript-Code-Quiz_index html (1)](https://user-images.githubusercontent.com/107971753/202349798-59ca9316-5c61-4621-a351-195a825874b2.png)
 ![_Users_tracymortara_UTA-Bootcamp_Challenges_Challenges-4_JavaScript-Code-Quiz_index html (3)](https://user-images.githubusercontent.com/107971753/202353540-c9608a48-2cc4-474f-b84e-c11b301d3e02.png)
-![_Users_tracymortara_UTA-Bootcamp_Challenges_Challenges-4_JavaScript-Code-Quiz_index html (1)](https://user-images.githubusercontent.com/107971753/202353552-4e0c125f-ded8-4291-a180-1ad99492466e.png)
+![_Users_tracymortara_UTA-Bootcamp_Challenges_Challenges-4_JavaScript-Code-Quiz_index html (2)](https://user-images.githubusercontent.com/107971753/202354133-b37dfa27-e173-49e6-83ed-0b293055162c.png)
+
