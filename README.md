@@ -2,7 +2,7 @@
 ## Description
 
 ## Deployed Quiz
-
+https://tmortara.github.io/JavaScript-Code-Quiz/
 ## Navigating the Quiz
 
 ## Built With
