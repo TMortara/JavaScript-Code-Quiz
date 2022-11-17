@@ -1,10 +1,10 @@
 # JavaScript-Code-Quiz
 ## Description
-
+The JavaScript Code Quiz was built to test your knowledge of JavaScript basics.  At the end of the quiz you will be asked to record your high scores. 
 ## Deployed Quiz
 https://tmortara.github.io/JavaScript-Code-Quiz/
-## Navigating the Quiz
-
+## Taking the Quiz
+When you are ready to test your knowledge click 'Start Quiz'.  Once you start you will have 1 minute to answer 5 questions. 'Correct' answers will add 100 points to your score while 'Incorrect' answers will deduct 10 seconds from your score.  You will be able to submit your initials to add your score to the High Scores list after you complete the quiz or when time expires.  You can complete the quiz as many times by clicking 'Restart Quiz' from the High Scores page.  High Scores can also be cleared by selecting Clear Scores.  Enjoy and Good Luck!     
 ## Built With
 - HTML
 - CSS
