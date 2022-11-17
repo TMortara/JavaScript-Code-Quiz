@@ -70,11 +70,8 @@ function startTimer() {
             show(inputHSEl);
             stopTimer();
         }
-    }, 500);
+    }, 700);
 }
-//CHANGE TIMER INTERVAL
-
-
 
 function stopTimer() {
     clearInterval(interval);
