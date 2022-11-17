@@ -19,7 +19,9 @@ None
 - [kqarlos Code Quiz GitHub](https://github.com/kqarlos/code-quiz)
 - [Stack Overflow: How can I do string interpolation in JavaScript?](https://stackoverflow.com/questions/1408289/how-can-i-do-string-interpolation-in-javascript)
 - [MDN Storage.clear()](https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear)
+- [MDN Window.localstorage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - [Stack Overflow: How to redirect to another page when the time runs out](https://stackoverflow.com/questions/545171/how-to-redirect-to-another-page-when-the-time-runs-out)
+- [Stack Overflow: How do i get Items from localstorage and render it to my list?](https://stackoverflow.com/questions/59750366/how-do-i-get-items-from-localstorage-and-render-it-to-my-list)
 ## License
 None
 ## Screenshot
