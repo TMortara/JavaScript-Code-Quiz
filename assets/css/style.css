@@ -21,6 +21,16 @@ header {
     height: 15%;
 }
 
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color:#98C1D9;
+    font-size: 2rem;
+}
+
+.metrics > h1 {
+margin: 0 auto;}
 
 #intro {
     display: flex;
@@ -82,14 +92,6 @@ a:visited{
     box-shadow: #98C1D9 0 12px 16px, 0 17px 50px 0 #98C1D9;
 }
 
-.metrics {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color:#98C1D9;
-    font-size: 2rem;
-}
-
 h3 {
     color:#E0FBFC;
     text-align: center;
@@ -141,10 +143,6 @@ h3 {
     box-shadow: #98C1D9 0 10px 12px, 0 12px 20px 0 #98C1D9;
 }
 
-
-
-
-
 .completion-message {
     color:#98C1D9;
     font-size: 3.0rem;
@@ -154,9 +152,9 @@ h3 {
 #inputHS {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
-
 
 .initials-input {
     color:#E0FBFC;
@@ -177,24 +175,3 @@ h3 {
     display: none;
 }
 
-/* #submitInitials-btn {
-    align-items: center;
-} */
-
-
-/* header {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-.container {
-    width: 800px;
-    max-width: 80%;
-    border-radius: 4px;
-    background-color: salmon;
-    padding: 10px;
-}  */

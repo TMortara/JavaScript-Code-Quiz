@@ -99,7 +99,7 @@ function startQuestions() {
 function checkAnswer(answer) {
     if (quizQuestions[questionAskedIndex].answer == answer.id) {
         score += 100;
-        currentScoreEl.textContent = "Current Score " + score;
+        currentScoreEl.textContent = "Score " + score;
         displayMessageEl.textContent = "Correct!"; 
         setTimeout(() => {
             displayMessageEl.textContent = " ";
@@ -108,6 +108,9 @@ function checkAnswer(answer) {
     else {
         totalTime -= 10;
         displayMessageEl.textContent = "Incorrect!";
+        setTimeout(() => {
+            displayMessageEl.textContent = " ";
+        }, 200); 
     }
 }
 
